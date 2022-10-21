@@ -4,12 +4,13 @@ import { exhaustMap, map, take, tap } from "rxjs/operators";
 import { AuthService } from "../auth/auth.service";
 import { Recipe } from "../recipes/recipe.model";
 import { RecipeService } from "../recipes/recipe.service";
+import { environment } from "../../environments/environment";
 
 @Injectable({
     providedIn: 'root'
 })
 export class DataStorageService {
-    private URL = 'https://ng-complete-guide-55bf2-default-rtdb.firebaseio.com';
+    private URL = environment.apiKey//'https://ng-complete-guide-55bf2-default-rtdb.firebaseio.com';
 
     constructor(private http: HttpClient, private recipeService: RecipeService,
         private authService: AuthService) { }
