@@ -10,7 +10,7 @@ import { environment } from "../../environments/environment";
     providedIn: 'root'
 })
 export class DataStorageService {
-    private URL = environment.apiKey//'https://ng-complete-guide-55bf2-default-rtdb.firebaseio.com';
+    private URL = environment.apiKey;
 
     constructor(private http: HttpClient, private recipeService: RecipeService,
         private authService: AuthService) { }
